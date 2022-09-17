@@ -61,11 +61,12 @@ h3{
 
 body{
 	height: 100vh;
+	overflow: hidden;
 }
 
 header{
 	width: 100%;
-	background-color: rgba(64, 40, 35, .75);
+	background-color: rgba(64, 40, 35, .85);
 	padding: 1rem 2rem;
 	display: flex;
 	justify-content: space-between;
