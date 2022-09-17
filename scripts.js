@@ -1,8 +1,8 @@
-const backgroundImgUno = document.getElementById("backgroundImgUno"),
-backgroundImgDos = document.getElementById("backgroundImgDos"),
-backgroundImgTres = document.getElementById("backgroundImgTres"),
-backgroundImgCuatro = document.getElementById("backgroundImgCuatro"),
-backgroundImgCinco = document.getElementById("backgroundImgCinco");
+const backgroundImgUno = document.getElementById("backgroundImgA"),
+backgroundImgDos = document.getElementById("backgroundImgB"),
+backgroundImgTres = document.getElementById("backgroundImgC"),
+backgroundImgCuatro = document.getElementById("backgroundImgD"),
+backgroundImgCinco = document.getElementById("backgroundImgE");
 
 let contador = 0;
 

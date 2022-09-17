@@ -32,161 +32,19 @@
 	font-size: 100%;
 }
 
-a{
-	text-decoration: none;
-}
-
-h1{
-	font-size: .75rem;
-	font-weight: 700;
-}
-
-h2{
-	font-family: var(--tipo__c1);
-	font-weight: 700;
-	font-size: 3rem;
-	line-height: 1em;
-}
-
-h3{
-	font-size: 1.5rem;
-	font-weight: normal;
-	font-style: italic;
-}
-
-.parrafo{
-	max-width: 620px;
-	font-weight: normal;
-}
-
 body{
 	height: 100vh;
 	overflow: hidden;
 }
 
-header{
-	width: 100%;
-	background-color: rgba(64, 40, 35, .85);
-	padding: 1rem 2rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: fixed;
-	z-index: 1000;
-	backdrop-filter: blur(10px);
-	box-shadow: 0 0 1rem rgba(0, 0, 0, .75);
-}
-
-.whatsapp-button{
-	background-color: var(--color__z1);
-	color: var(--color__z2);
-	padding: .75rem 2rem;
-	border-radius: 2rem;
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-	outline: none;
-	border: none;
-	cursor: pointer;
-	transition: background-color, color, .3s ease-in-out;
-	animation: wssp 5s infinite;
-}
-
-@keyframes wssp{
-	0%{
-		transform: scale(1.0);
-		box-shadow: none;
-	}
-	80%{
-		transform: scale(1.0);
-		box-shadow: none;
-	}
-	90%{
-		transform: scale(1.15);
-		box-shadow: 0 0 1rem rgba(0, 0, 0, .75);
-	}
-	100%{
-		transform: scale(1.0);
-		box-shadow: none;
-	}
-}
-
-#wspp-logo{
-	font-size: 2rem;
-	color: var(--color__z2);
-	transition: color, .3s ease-in-out;
-}
-
-.whatsapp-button:hover{
-	background-color: var(--color__wspp);
-	color: var(--color__z1);
-}
-
-.whatsapp-button:hover > #wspp-logo{
-	color: var(--color__z1);
-}
-
-.logo-container{
-	display: flex;
-	gap: 1rem;
-	align-items: center;
-	transition: transform, .3s ease-in-out;
-}
-
-.logo-container:hover{
-	transform: scale(1.05);
-}
-
-.logo-container:hover > .iso-container{
-	box-shadow: 0 0 1rem rgba(0, 0, 0, .75);
-}
-
-.logo-container:hover > .logotipo{
-	text-shadow: 0 0 1rem rgba(0, 0, 0, .75);
-}
-
-.iso-container{
-	background-color: var(--color__a3);
-	border-radius: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 3.25rem;
-	height: 3.25rem;
-	transition: box-shadow, .3s ease-in-out;
-}
-
-.iso-container img{
-	width: 55%;
-	height: 55%;
-	margin-bottom: .4rem;
-	filter: invert(100%);
-}
-
-.logotipo{
-	font-size: 1.5rem;
-	font-family: var(--tipo__a1);
-	transition: text-shadow, .3s ease-in-out;
-}
-
-main{
-	top: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 100%;
-	width: 100%;
-	position: absolute;
-}
-
-.background{
+.background-container{
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
 }
 
-.background-images{
+.background-image{
 	position: absolute;
 	height: 110%;
 	width: 110%;
@@ -218,7 +76,7 @@ main{
 	}
 }
 
-.background-filtro{
+.background-filter{
 	top: 0;
 	left: 0;
 	position: absolute;
@@ -227,28 +85,145 @@ main{
 	background: linear-gradient(90deg, rgba(0, 0, 0, .75), rgba(64, 40, 30, .5), transparent);
 }
 
-.section-1{
-	position: absolute;
+a{
+	text-decoration: none;
+}
+
+header{
+	width: 100%;
+	background-color: rgba(64, 40, 35, .85);
+	padding: 1rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	z-index: 1000;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 0 1rem rgba(0, 0, 0, .75);
+}
+
+.logo{
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	transition: transform, .3s ease-in-out;
+}
+
+.logo:hover{
+	transform: scale(1.05);
+}
+
+.logo:hover > .iso-container{
+	box-shadow: 0 0 1rem rgba(0, 0, 0, .75);
+}
+
+.logo:hover > .logotipo{
+	text-shadow: 0 0 1rem rgba(0, 0, 0, .75);
+}
+
+.iso-container{
+	background-color: var(--color__a3);
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 3.25rem;
+	height: 3.25rem;
+	transition: box-shadow, .3s ease-in-out;
+}
+
+.iso-container img{
+	width: 55%;
+	height: 55%;
+	margin-bottom: .4rem;
+	filter: invert(100%);
+}
+
+.logotipo{
+	font-size: 1.5rem;
+	font-family: var(--tipo__a1);
+	transition: text-shadow, .3s ease-in-out;
+}
+
+.whatsapp-button{
+	background-color: var(--color__z1);
+	color: var(--color__z2);
+	padding: .75rem 2rem;
+	border-radius: 2rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	transition: background-color, color, .3s ease-in-out;
+	animation: wssp-animation 5s infinite;
+}
+
+@keyframes wssp-animation{
+	0%{
+		transform: scale(1.0);
+		box-shadow: none;
+	}
+	80%{
+		transform: scale(1.0);
+		box-shadow: none;
+	}
+	90%{
+		transform: scale(1.15);
+		box-shadow: 0 0 1rem rgba(0, 0, 0, .75);
+	}
+	100%{
+		transform: scale(1.0);
+		box-shadow: none;
+	}
+}
+
+#wspp-logo{
+	font-size: 2rem;
+	color: var(--color__z2);
+	transition: color, .3s ease-in-out;
+}
+
+.whatsapp-button:hover{
+	background-color: var(--color__wspp);
+	color: var(--color__z1);
+	animation-duration: 0s;
+}
+
+.whatsapp-button:hover > #wspp-logo{
+	color: var(--color__z1);
+}
+
+main{
+	top: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	height: 100%;
+	width: 100%;
+	position: absolute;
 	gap: 1rem;
 	padding: 13rem 2rem 7.5rem 2rem;
 	overflow: auto;
 }
 
-.section-1::-webkit-scrollbar {
+main::-webkit-scrollbar {
     display: none;
 }
 
-.titulos{
+h1{
+	font-size: .75rem;
+	font-weight: 700;
+}
+
+.titles{
 	display: flex;
 	flex-direction: column;
 	gap: .5rem;
 }
 
-.h2{
+.h2-container{
 	max-width: 620px;
 	display: flex;
 	flex-direction: column;
@@ -259,6 +234,23 @@ main{
 	height: .1rem;
 	width: 100%;
 	background-color: var(--color__z1);
+}
+
+h2{
+	font-family: var(--tipo__c1);
+	font-weight: 700;
+	font-size: 3rem;
+	line-height: 1em;
+}
+
+h3{
+	font-size: 1.5rem;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.paragraph{
+	max-width: 620px;
 }
 
 footer{
@@ -276,17 +268,13 @@ footer{
 	box-shadow: 0 0 .25rem rgba(0, 0, 0, .25);
 }
 
-.text-black{
-	font-weight: 100;
-}
-
-.redes{
+.socials{
 	display: flex;
 	gap: 1rem;
 	align-items: center;
 }
 
-.redes-logo-background{
+.socials-logo-background{
 	width: 2.25rem;
 	height: 2.25rem;
 	display: flex;
@@ -297,20 +285,20 @@ footer{
 	transition: transform, border, background-color, .3s ease-in-out;
 }
 
-.redes-logo-background:hover{
+.socials-logo{
+	color: var(--color__z1);
+	font-size: 1.2rem;
+	transition: color, .3s ease-in-out;
+}
+
+.socials-logo-background:hover{
 	transform: scale(1.05);
 	border: none;
 	background-color: var(--color__z1);
 }
 
-.redes-logo-background:hover > .redes-logo{
+.socials-logo-background:hover > .socials-logo{
 	color: var(--color__z2);
-}
-
-.redes-logo{
-	color: var(--color__z1);
-	font-size: 1.2rem;
-	transition: color, .3s ease-in-out;
 }
 
 @media only screen and (max-width: 700px){
@@ -320,35 +308,31 @@ footer{
 }
 
 @media only screen and (max-width: 600px){
-
-	.section-1{
-		justify-content: flex-end;
-	}
-
-	.background-filtro{
+	.background-filter{
 		bottom: 0;
 		background: linear-gradient(0deg, rgba(0, 0, 0, .75), rgba(64, 40, 30, .5), transparent);
+	}
+
+	main{
+		justify-content: flex-end;
 	}
 
 	h2{
 		font-size: 2rem;
 	}
 
-	.parrafo{
+	.paragraph{
 		width: 100%;
 	}
 }
 
 @media only screen and (max-width: 500px){
-
 	.logotipo{
 		display: none;
 	}
-
 }
 
 @media only screen and (max-width: 300px){
-
 	.whatsapp-button{
 		font-size: .75rem;
 	}
@@ -356,5 +340,4 @@ footer{
 	#wspp-logo{
 		font-size: 1.5rem;
 	}
-
 }
