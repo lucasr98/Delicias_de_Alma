@@ -1,11 +1,31 @@
-const backgroundImgUno = document.getElementById("backgroundImgA"),
-backgroundImgDos = document.getElementById("backgroundImgB"),
-backgroundImgTres = document.getElementById("backgroundImgC"),
-backgroundImgCuatro = document.getElementById("backgroundImgD"),
-backgroundImgCinco = document.getElementById("backgroundImgE");
+const backgroundImg = document.querySelectorAll(".background-image");
 
-let contador = 0;
+function cambiarBackground(){
 
+	let contador = 1;
+
+	backgroundImg[0].style.opacity = "1";
+
+	setInterval(()=>{
+
+		backgroundImg.forEach(imagen=>{
+			imagen.style.opacity = "0";
+		});
+
+		backgroundImg[contador].style.opacity = "1";
+
+		contador++
+		if (contador == backgroundImg.length) {
+			contador = 0;
+		}
+
+	}, 10000);
+
+}
+
+cambiarBackground()
+
+/*
 function cambiarBackground(){
 	if(contador == 0){
 		backgroundImgUno.style.opacity = "1";
@@ -52,3 +72,4 @@ function cambiarBackground(){
 cambiarBackground();
 
 setInterval(cambiarBackground, 10000);
+*/
